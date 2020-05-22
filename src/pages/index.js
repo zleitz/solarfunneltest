@@ -1,3 +1,14 @@
 import React from "react"
+import { Link } from "gatsby"
 
-export default () => <div>Hello world!</div>
+import Form from "../components/Form"
+
+const IndexPage = () => {
+  return (
+    <div>
+      <Form />
+    </div>
+  )
+}
+
+export default IndexPage
