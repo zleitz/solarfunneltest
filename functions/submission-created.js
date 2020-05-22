@@ -11,10 +11,9 @@ const {
 const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 exports.handler = function (event, context, callback) {
-  const name = JSON.parse(event.body).payload.name
-  const email = JSON.parse(event.body).payload.email
-  const tel = JSON.parse(event.body).payload.email
-  const message = `Name: ${name} Email: ${email} Tel: ${tel}`
+  const [name, email, tel] = JSON.parse(event.body).payload
+
+  const message = `Name: ${name} \n Email: ${email} \n Tel: ${tel}`
 
   Promise.all(
     // split the string of several messages into single numbers
