@@ -11,9 +11,9 @@ const {
 const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 exports.handler = function (event, context, callback) {
-  const name = JSON.parse(event.body).payload.name
-  const email = JSON.parse(event.body).payload.email
-  const tel = JSON.parse(event.body).payload.tel
+  const name = JSON.parse(event.body).payload.data.name
+  const email = JSON.parse(event.body).payload.data.email
+  const tel = JSON.parse(event.body).payload.data.tel
   const message = `Name: ${name} \n Email: ${email} \n Phone Number: ${tel}`
   console.log(JSON.parse(event.body).payload)
 
