@@ -16,7 +16,7 @@ const Form = () => {
       </p>
       <p>
         <label>
-          Your Phone Number: <input type="tel" name="tel" />
+          Your Phone Number: <input type="text" name="tel" />
         </label>
       </p>
       <p>
